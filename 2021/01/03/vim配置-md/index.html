@@ -12,7 +12,7 @@
 
 
 
-<title>C语言学习基础知识.md | 一介布衣mgh</title>
+<title>vim配置.md | 一介布衣mgh</title>
 
 
 
@@ -173,7 +173,7 @@
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">C语言学习基础知识.md</h1>
+            <h1 class="post-title">vim配置.md</h1>
             
                 <div class="post-meta">
                     
@@ -182,7 +182,7 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">January 3, 2021&nbsp;&nbsp;17:04:29</a>
+                        Date: <a href="#">January 3, 2021&nbsp;&nbsp;17:36:41</a>
                         </span>
                     
                     
@@ -191,21 +191,7 @@
         </header>
 
         <div class="post-content">
-            <h3 id="编译器gcc编译-c文件的过程"><a href="#编译器gcc编译-c文件的过程" class="headerlink" title="编译器gcc编译.c文件的过程"></a>编译器gcc编译.c文件的过程</h3><p>C源文件-&gt;预处理-&gt;编译-&gt;汇编-&gt;链接-&gt;可执行文件<br>以hello.c为例<br>预处理：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -E hello.<span class="keyword">c</span> &gt; hello.i</span><br></pre></td></tr></table></figure>
-<p>编译：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -S hello.i &gt; hello.s</span><br></pre></td></tr></table></figure>
-<p>汇编：默认生成一个hello.o的文件</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -<span class="keyword">c</span> hello.s</span><br></pre></td></tr></table></figure>
-<p>链接：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc hello.<span class="keyword">o</span> -<span class="keyword">o</span> &gt; hello</span><br></pre></td></tr></table></figure>
-<p>可执行文件：</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./hello</span><br></pre></td></tr></table></figure>
-<p>以上方式可以用</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc hello.<span class="keyword">c</span></span><br></pre></td></tr></table></figure>
-<p>以及</p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">make</span> hello.<span class="keyword">c</span></span><br></pre></td></tr></table></figure>
-<p>完成。</p>
+            <h4 id="基础知识"><a href="#基础知识" class="headerlink" title="基础知识"></a>基础知识</h4><p>Vim的全局配置一般在<code>/etc/vim/vimrc</code>或者<code>/etc/vimrc</code>，<br>用户个人的配置在<code>~/.vimrc</code>。</p>
 
         </div>
 
@@ -220,7 +206,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://example.com/2021/01/03/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-md/">http://example.com/2021/01/03/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-md/</a></span>
+                        <span><a href="http://example.com/2021/01/03/vim%E9%85%8D%E7%BD%AE-md/">http://example.com/2021/01/03/vim%E9%85%8D%E7%BD%AE-md/</a></span>
                     </p>
                 
                 
@@ -253,10 +239,8 @@
         </section>
         <section class="post-nav">
             
-                <a class="prev" rel="prev" href="/2021/01/03/vim%E9%85%8D%E7%BD%AE-md/">vim配置.md</a>
             
-            
-            <a class="next" rel="next" href="/2020/12/13/OpenLanguage-series/">Working overtime and conpensation</a>
+            <a class="next" rel="next" href="/2021/01/03/C%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86-md/">C语言学习基础知识.md</a>
             
         </section>
 
