@@ -193,7 +193,19 @@
         <div class="post-content">
             <h3 id="编译器gcc编译-c文件的过程"><a href="#编译器gcc编译-c文件的过程" class="headerlink" title="编译器gcc编译.c文件的过程"></a>编译器gcc编译.c文件的过程</h3><p>C源文件-&gt;预处理-&gt;编译-&gt;汇编-&gt;链接-&gt;可执行文件<br>以hello.c为例<br>预处理：</p>
 <figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -E hello.<span class="keyword">c</span> &gt; hello.i</span><br></pre></td></tr></table></figure>
-
+<p>编译：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -S hello.i &gt; hello.s</span><br></pre></td></tr></table></figure>
+<p>汇编：默认生成一个hello.o的文件</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc -<span class="keyword">c</span> hello.s</span><br></pre></td></tr></table></figure>
+<p>链接：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc hello.<span class="keyword">o</span> -<span class="keyword">o</span> &gt; hello</span><br></pre></td></tr></table></figure>
+<p>可执行文件：</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./hello</span><br></pre></td></tr></table></figure>
+<p>以上方式可以用</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gcc hello.<span class="keyword">c</span></span><br></pre></td></tr></table></figure>
+<p>以及</p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">make</span> hello.<span class="keyword">c</span></span><br></pre></td></tr></table></figure>
+<p>完成。</p>
 
         </div>
 
