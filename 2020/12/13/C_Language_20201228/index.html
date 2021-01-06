@@ -198,14 +198,12 @@
         </header>
 
         <div class="post-content">
-            <h3 id="数据类型、运算符和表达式"><a href="#数据类型、运算符和表达式" class="headerlink" title="数据类型、运算符和表达式"></a>数据类型、运算符和表达式</h3><p>1、C数据类型：基本类型，构造类型，指针类型，指针。</p>
-<ul>
-<li>基本类型<br>1）所占字节数：<br>2）存储区别：<br>254  -&gt; unsigned int  -&gt;  32位</li>
-</ul>
-<p>$(254)<em>{10} = (11111110)_2 = (376)_8 = (FE)</em>{16}$</p>
-<p>254 十进制<br>B11111110<br>0376<br>0xFE</p>
-<p>补码（整数的存储方式）<br>254<br>11111110<br>254  -&gt; unsigned int  -&gt;  32位<br>-254  -&gt; signed int   -&gt;  11111110  -&gt;  取反  +  1</p>
-<p>浮点数：第31位表示正负，第30位至第23位表示指数，第22位至第0位表示小数点位数。<br>$0.000789  -&gt;   0.789e3$</p>
+            <h3 id="数据类型、运算符和表达式"><a href="#数据类型、运算符和表达式" class="headerlink" title="数据类型、运算符和表达式"></a>数据类型、运算符和表达式</h3><p>1、C数据类型：基本类型，构造类型，指针类型，指针。<br>基本类型<br>1）所占字节数：<br>2）存储区别：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">254  -&gt; unsigned int  -&gt;  32位</span><br><span class="line"></span><br><span class="line">$(<span class="number">254</span>)_&#123;<span class="number">10</span>&#125; = (<span class="number">11111110</span>)_2 = (<span class="number">376</span>)_8 = (FE)_&#123;<span class="number">16</span>&#125;$</span><br><span class="line"></span><br><span class="line"><span class="number">254</span> </span><br><span class="line">B11111110</span><br><span class="line">0376</span><br><span class="line"><span class="number">0xFE</span></span><br></pre></td></tr></table></figure>
+
+<p>补码（整数的存储方式）</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">254</span></span><br><span class="line"><span class="number">11111110</span></span><br><span class="line">254  -&gt; unsigned int  -&gt;  32位</span><br><span class="line">-254  -&gt; signed int   -&gt;  11111110  -&gt;  取反  +  1</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">浮点数：第<span class="number">31</span>位表示正负，第<span class="number">30</span>位至第<span class="number">23</span>位表示指数，第<span class="number">22</span>位至第<span class="number">0</span>位表示小数点位数。</span><br><span class="line">``` python</span><br><span class="line">$0.000789  -&gt;   0.789e3$</span><br></pre></td></tr></table></figure>
+
 <p>3）不同类型转换：<br>4）特殊性：<br>（1）bool型<br>（2）float类型<br>（3）char是否有符号<br>（4）不同形式的0值：0， ‘a’，”0”，’\0’<br>（5）数据类型与后续代码中所使用的输入输出要相匹配（防止出现矛盾）</p>
 <p>2、常量与变量<br>1）常量<br>（1）整型常数<br>（2）实型常量<br>（3）字符常量：单引号<br>（4）字符串常量：双引号<br>（5）标识常量（宏定义）：#define，处理在程序的预处理截断，占编译时间，优点：一改全改，缺点：不检查语法，只是单纯的宏体与宏名之间的替换。</p>
 <p>2）变量<br>（1）标识符：命名<br>（2）数据类型：<br>（3）存储类型：auto  static  register  extern</p>
