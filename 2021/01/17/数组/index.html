@@ -12,7 +12,7 @@
 
 
 
-<title>C_language_20210117_I/O | 一介布衣mgh</title>
+<title>数组 | 一介布衣mgh</title>
 
 
 
@@ -107,11 +107,73 @@
             <div class="container">
     
     
+        <div class="post-toc">
+    <div class="tocbot-list">
+    </div>
+    <div class="tocbot-list-menu">
+        <a class="tocbot-toc-expand" onclick="expand_toc()">Expand all</a>
+        <a onclick="go_top()">Back to top</a>
+        <a onclick="go_bottom()">Go to bottom</a>
+    </div>
+</div>
+
+<script>
+    document.ready(
+        function () {
+            tocbot.init({
+                tocSelector: '.tocbot-list',
+                contentSelector: '.post-content',
+                headingSelector: 'h1, h2, h3, h4, h5',
+                collapseDepth: 1,
+                orderedList: false,
+                scrollSmooth: true,
+            })
+        }
+    )
+
+    function expand_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 6,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "collapse_toc()");
+        b.innerHTML = "Collapse all"
+    }
+
+    function collapse_toc() {
+        var b = document.querySelector(".tocbot-toc-expand");
+        tocbot.init({
+            tocSelector: '.tocbot-list',
+            contentSelector: '.post-content',
+            headingSelector: 'h1, h2, h3, h4, h5',
+            collapseDepth: 1,
+            orderedList: false,
+            scrollSmooth: true,
+        });
+        b.setAttribute("onclick", "expand_toc()");
+        b.innerHTML = "Expand all"
+    }
+
+    function go_top() {
+        window.scrollTo(0, 0);
+    }
+
+    function go_bottom() {
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+
+</script>
+    
 
     
     <article class="post-wrap">
         <header class="post-header">
-            <h1 class="post-title">C_language_20210117_I/O</h1>
+            <h1 class="post-title">数组</h1>
             
                 <div class="post-meta">
                     
@@ -120,16 +182,37 @@
 
                     
                         <span class="post-time">
-                        Date: <a href="#">January 17, 2021&nbsp;&nbsp;22:49:04</a>
+                        Date: <a href="#">January 17, 2021&nbsp;&nbsp;23:10:05</a>
                         </span>
                     
+                    
+                        <span class="post-category">
+                    Category:
+                            
+                                <a href="/categories/C%E8%AF%AD%E8%A8%80%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/">C语言基础知识</a>
+                            
+                        </span>
                     
                 </div>
             
         </header>
 
         <div class="post-content">
-            
+            <h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><p>1、一维数组<br>1）定义</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int arr[3]</span><br></pre></td></tr></table></figure>
+
+<p>2）初试化<br>不初始化<br>部分初始化<br>完全初始化<br>static<br>3）元素引用</p>
+<pre><code>arr[0]
+```
+4）数组名
+数组名是表示地址的常量，也是数组的起始位置。
+5）数组越界
+6）数组练习
+- fibonacci数列:求fibonacci数列的前十项，并在数组中逆序存放。
+&lt;https://github.com/leopold2015/C_language/blob/master/C%E8%AF%AD%E8%A8%80%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81/arr/fibonacci.c&gt;
+2、二维数组
+3、字符数组</code></pre>
+
         </div>
 
         
@@ -143,7 +226,7 @@
                 
                     <p class="copyright-item">
                         <span>Permalink:</span>
-                        <span><a href="http://example.com/2021/01/17/C-language-20210117-I-O/">http://example.com/2021/01/17/C-language-20210117-I-O/</a></span>
+                        <span><a href="http://example.com/2021/01/17/%E6%95%B0%E7%BB%84/">http://example.com/2021/01/17/%E6%95%B0%E7%BB%84/</a></span>
                     </p>
                 
                 
@@ -177,7 +260,7 @@
         <section class="post-nav">
             
             
-            <a class="next" rel="next" href="/2021/01/06/pencil-20210106/">开年第一篇</a>
+            <a class="next" rel="next" href="/2021/01/17/%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E4%B8%93%E9%A2%98/">输入输出专题</a>
             
         </section>
 
